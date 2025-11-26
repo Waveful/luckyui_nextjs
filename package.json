@@ -1,42 +1,126 @@
 {
-  "name": "luckyui",
+  "name": "@waveful-app/luckyui",
   "version": "0.1.0",
-  "private": true,
+  "description": "A comprehensive Next.js/React design system package by Waveful - scalable and consistent UI components for modern applications",
+  "author": "Waveful <hello@waveful.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://lucky-ui.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Waveful/luckyui_nextjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Waveful/luckyui_nextjs/issues"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "ui",
+    "components",
+    "design-system",
+    "tailwindcss",
+    "radix-ui",
+    "typescript",
+    "waveful",
+    "luckyui"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./styles": "./dist/styles.css",
+    "./tailwind.config": {
+      "import": {
+        "types": "./dist/tailwind.config.d.ts",
+        "default": "./dist/tailwind.config.js"
+      },
+      "require": {
+        "types": "./dist/tailwind.config.d.cts",
+        "default": "./dist/tailwind.config.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:lib": "tsup",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tailwindcss": "^3.4.0",
+    "hugeicons-react": "^0.3.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    },
+    "hugeicons-react": {
+      "optional": true
+    }
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.1",
+    "@radix-ui/react-aspect-ratio": "^1.1.0",
+    "@radix-ui/react-avatar": "^1.1.1",
+    "@radix-ui/react-checkbox": "^1.1.2",
+    "@radix-ui/react-collapsible": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-popover": "^1.1.2",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-radio-group": "^1.2.1",
+    "@radix-ui/react-scroll-area": "^1.2.0",
     "@radix-ui/react-select": "^2.1.2",
     "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slider": "^1.2.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.1",
     "@radix-ui/react-tabs": "^1.1.1",
     "@radix-ui/react-toast": "^1.2.2",
     "@radix-ui/react-tooltip": "^1.1.3",
-    "autoprefixer": "^10.4.22",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "hugeicons-react": "^0.3.0",
-    "next": "14.2.15",
-    "react": "^18",
-    "react-dom": "^18",
-    "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.22",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
+    "next": "14.2.15",
     "postcss": "^8",
+    "react": "^18",
+    "react-dom": "^18",
     "tailwindcss": "^3.4.1",
+    "hugeicons-react": "^0.3.0",
+    "tailwindcss-animate": "^1.0.7",
+    "tsup": "^8.3.5",
     "typescript": "^5"
   }
 }

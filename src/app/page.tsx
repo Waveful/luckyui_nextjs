@@ -144,7 +144,7 @@ export default function Home() {
               </IconButton>
               <Button 
                 className="rounded-full"
-                onClick={() => window.open("https://www.npmjs.com/package/luckyui", "_blank")}
+                onClick={() => window.open("https://www.npmjs.com/package/@waveful-app/luckyui", "_blank")}
               >
                 Get Started
               </Button>
@@ -194,13 +194,13 @@ export default function Home() {
             <Card variant="filled" className="p-4">
               <div className="flex items-center gap-2">
                 <code className="flex-1 text-sm text-muted-foreground text-left font-mono">
-                  npx create-luckyui@latest
+                  npm install @waveful-app/luckyui
                 </code>
                 <IconButton 
                   variant="ghost" 
                   size="sm"
                   onClick={() => {
-                    navigator.clipboard.writeText("npx create-luckyui@latest");
+                    navigator.clipboard.writeText("npm install @waveful-app/luckyui");
                     toast({ title: "Copied to clipboard!", variant: "success" });
                   }}
                 >
