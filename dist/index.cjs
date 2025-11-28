@@ -1,6 +1,6 @@
 'use strict';
 
-var React10 = require('react');
+var React14 = require('react');
 var reactSlot = require('@radix-ui/react-slot');
 var classVarianceAuthority = require('class-variance-authority');
 var clsx = require('clsx');
@@ -34,7 +34,7 @@ function _interopNamespace(e) {
   return Object.freeze(n);
 }
 
-var React10__namespace = /*#__PURE__*/_interopNamespace(React10);
+var React14__namespace = /*#__PURE__*/_interopNamespace(React14);
 var LabelPrimitive__namespace = /*#__PURE__*/_interopNamespace(LabelPrimitive);
 var SwitchPrimitives__namespace = /*#__PURE__*/_interopNamespace(SwitchPrimitives);
 var SelectPrimitive__namespace = /*#__PURE__*/_interopNamespace(SelectPrimitive);
@@ -138,10 +138,10 @@ var buttonVariants = classVarianceAuthority.cva(
     }
   }
 );
-var Button = React10__namespace.forwardRef(
+var Button = React14__namespace.forwardRef(
   ({ className, variant, size, asChild = false, loading, children, disabled, ...props }, ref) => {
     const Comp = asChild ? reactSlot.Slot : "button";
-    return /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(
       Comp,
       {
         className: cn(buttonVariants({ variant, size, className })),
@@ -149,12 +149,12 @@ var Button = React10__namespace.forwardRef(
         disabled: disabled || loading,
         ...props
       },
-      loading ? /* @__PURE__ */ React10__namespace.createElement(React10__namespace.Fragment, null, /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.Loading01Icon, { className: "animate-spin", size: 20 }), /* @__PURE__ */ React10__namespace.createElement("span", null, "Loading...")) : children
+      loading ? /* @__PURE__ */ React14__namespace.createElement(React14__namespace.Fragment, null, /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.Loading01Icon, { className: "animate-spin", size: 20 }), /* @__PURE__ */ React14__namespace.createElement("span", null, "Loading...")) : children
     );
   }
 );
 Button.displayName = "Button";
-var TextButton = React10__namespace.forwardRef(({ className, loading, children, disabled, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var TextButton = React14__namespace.forwardRef(({ className, loading, children, disabled, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "button",
   {
     ref,
@@ -165,10 +165,10 @@ var TextButton = React10__namespace.forwardRef(({ className, loading, children, 
     disabled: disabled || loading,
     ...props
   },
-  loading ? /* @__PURE__ */ React10__namespace.createElement(React10__namespace.Fragment, null, /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.Loading01Icon, { className: "animate-spin", size: 20 }), /* @__PURE__ */ React10__namespace.createElement("span", null, "Loading...")) : children
+  loading ? /* @__PURE__ */ React14__namespace.createElement(React14__namespace.Fragment, null, /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.Loading01Icon, { className: "animate-spin", size: 20 }), /* @__PURE__ */ React14__namespace.createElement("span", null, "Loading...")) : children
 ));
 TextButton.displayName = "TextButton";
-var IconButton = React10__namespace.forwardRef(({ className, variant = "ghost", size = "default", ...props }, ref) => {
+var IconButton = React14__namespace.forwardRef(({ className, variant = "ghost", size = "default", ...props }, ref) => {
   const sizeClasses = {
     sm: "h-10 w-10",
     default: "h-12 w-12",
@@ -179,7 +179,7 @@ var IconButton = React10__namespace.forwardRef(({ className, variant = "ghost", 
     ghost: "hover:bg-accent hover:text-accent-foreground",
     outline: "border border-input bg-transparent hover:bg-accent"
   };
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     "button",
     {
       ref,
@@ -194,9 +194,9 @@ var IconButton = React10__namespace.forwardRef(({ className, variant = "ghost", 
   );
 });
 IconButton.displayName = "IconButton";
-var Input = React10__namespace.forwardRef(
+var Input = React14__namespace.forwardRef(
   ({ className, type, error, icon, iconPosition = "left", heading, description, ...props }, ref) => {
-    const inputElement = /* @__PURE__ */ React10__namespace.createElement("div", { className: "relative" }, icon && iconPosition === "left" && /* @__PURE__ */ React10__namespace.createElement("div", { className: "absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground [&_svg]:size-5" }, icon), /* @__PURE__ */ React10__namespace.createElement(
+    const inputElement = /* @__PURE__ */ React14__namespace.createElement("div", { className: "relative" }, icon && iconPosition === "left" && /* @__PURE__ */ React14__namespace.createElement("div", { className: "absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground [&_svg]:size-5" }, icon), /* @__PURE__ */ React14__namespace.createElement(
       "input",
       {
         type,
@@ -210,9 +210,9 @@ var Input = React10__namespace.forwardRef(
         ref,
         ...props
       }
-    ), icon && iconPosition === "right" && /* @__PURE__ */ React10__namespace.createElement("div", { className: "absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground [&_svg]:size-5" }, icon));
+    ), icon && iconPosition === "right" && /* @__PURE__ */ React14__namespace.createElement("div", { className: "absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground [&_svg]:size-5" }, icon));
     if (heading || description) {
-      return /* @__PURE__ */ React10__namespace.createElement("div", { className: "space-y-2" }, heading && /* @__PURE__ */ React10__namespace.createElement("label", { className: "text-sm font-medium leading-none text-foreground" }, heading), inputElement, description && /* @__PURE__ */ React10__namespace.createElement("p", { className: cn(
+      return /* @__PURE__ */ React14__namespace.createElement("div", { className: "space-y-2" }, heading && /* @__PURE__ */ React14__namespace.createElement("label", { className: "text-sm font-medium leading-none text-foreground" }, heading), inputElement, description && /* @__PURE__ */ React14__namespace.createElement("p", { className: cn(
         "text-sm",
         error ? "text-destructive" : "text-muted-foreground"
       ) }, description));
@@ -221,13 +221,13 @@ var Input = React10__namespace.forwardRef(
   }
 );
 Input.displayName = "Input";
-var SearchBar = React10__namespace.forwardRef(
+var SearchBar = React14__namespace.forwardRef(
   ({ className, onSearch, icon, onChange, ...props }, ref) => {
     const handleChange = (e) => {
       onChange == null ? void 0 : onChange(e);
       onSearch == null ? void 0 : onSearch(e.target.value);
     };
-    return /* @__PURE__ */ React10__namespace.createElement("div", { className: "relative" }, /* @__PURE__ */ React10__namespace.createElement("div", { className: "absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground [&_svg]:size-5" }, icon || /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement("div", { className: "relative" }, /* @__PURE__ */ React14__namespace.createElement("div", { className: "absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground [&_svg]:size-5" }, icon || /* @__PURE__ */ React14__namespace.createElement(
       "svg",
       {
         xmlns: "http://www.w3.org/2000/svg",
@@ -240,9 +240,9 @@ var SearchBar = React10__namespace.forwardRef(
         strokeLinecap: "round",
         strokeLinejoin: "round"
       },
-      /* @__PURE__ */ React10__namespace.createElement("circle", { cx: "11", cy: "11", r: "8" }),
-      /* @__PURE__ */ React10__namespace.createElement("path", { d: "m21 21-4.3-4.3" })
-    )), /* @__PURE__ */ React10__namespace.createElement(
+      /* @__PURE__ */ React14__namespace.createElement("circle", { cx: "11", cy: "11", r: "8" }),
+      /* @__PURE__ */ React14__namespace.createElement("path", { d: "m21 21-4.3-4.3" })
+    )), /* @__PURE__ */ React14__namespace.createElement(
       "input",
       {
         type: "search",
@@ -258,9 +258,9 @@ var SearchBar = React10__namespace.forwardRef(
   }
 );
 SearchBar.displayName = "SearchBar";
-var Textarea = React10__namespace.forwardRef(
+var Textarea = React14__namespace.forwardRef(
   ({ className, error, heading, description, ...props }, ref) => {
-    const textareaElement = /* @__PURE__ */ React10__namespace.createElement(
+    const textareaElement = /* @__PURE__ */ React14__namespace.createElement(
       "textarea",
       {
         className: cn(
@@ -273,7 +273,7 @@ var Textarea = React10__namespace.forwardRef(
       }
     );
     if (heading || description) {
-      return /* @__PURE__ */ React10__namespace.createElement("div", { className: "space-y-2" }, heading && /* @__PURE__ */ React10__namespace.createElement("label", { className: "text-sm font-medium leading-none text-foreground" }, heading), textareaElement, description && /* @__PURE__ */ React10__namespace.createElement("p", { className: cn(
+      return /* @__PURE__ */ React14__namespace.createElement("div", { className: "space-y-2" }, heading && /* @__PURE__ */ React14__namespace.createElement("label", { className: "text-sm font-medium leading-none text-foreground" }, heading), textareaElement, description && /* @__PURE__ */ React14__namespace.createElement("p", { className: cn(
         "text-sm",
         error ? "text-destructive" : "text-muted-foreground"
       ) }, description));
@@ -285,7 +285,7 @@ Textarea.displayName = "Textarea";
 var labelVariants = classVarianceAuthority.cva(
   "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 );
-var Label = React10__namespace.forwardRef(({ className, children, required, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var Label = React14__namespace.forwardRef(({ className, children, required, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   LabelPrimitive__namespace.Root,
   {
     ref,
@@ -293,16 +293,16 @@ var Label = React10__namespace.forwardRef(({ className, children, required, ...p
     ...props
   },
   children,
-  required && /* @__PURE__ */ React10__namespace.createElement("span", { className: "text-destructive ml-1" }, "*")
+  required && /* @__PURE__ */ React14__namespace.createElement("span", { className: "text-destructive ml-1" }, "*")
 ));
 Label.displayName = LabelPrimitive__namespace.Root.displayName;
-var Checkbox = React10__namespace.forwardRef(
+var Checkbox = React14__namespace.forwardRef(
   ({ className, indeterminate, onCheckedChange, checked, defaultChecked, ...props }, ref) => {
-    const inputRef = React10__namespace.useRef(null);
-    const [isChecked, setIsChecked] = React10__namespace.useState(defaultChecked ?? false);
+    const inputRef = React14__namespace.useRef(null);
+    const [isChecked, setIsChecked] = React14__namespace.useState(defaultChecked ?? false);
     const checkedValue = checked !== void 0 ? checked : isChecked;
-    React10__namespace.useImperativeHandle(ref, () => inputRef.current);
-    React10__namespace.useEffect(() => {
+    React14__namespace.useImperativeHandle(ref, () => inputRef.current);
+    React14__namespace.useEffect(() => {
       if (inputRef.current) {
         inputRef.current.indeterminate = indeterminate || false;
       }
@@ -314,7 +314,7 @@ var Checkbox = React10__namespace.forwardRef(
       }
       onCheckedChange == null ? void 0 : onCheckedChange(newChecked);
     };
-    return /* @__PURE__ */ React10__namespace.createElement("div", { className: "relative inline-flex items-center" }, /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement("div", { className: "relative inline-flex items-center" }, /* @__PURE__ */ React14__namespace.createElement(
       "input",
       {
         type: "checkbox",
@@ -327,7 +327,7 @@ var Checkbox = React10__namespace.forwardRef(
         ),
         ...props
       }
-    ), /* @__PURE__ */ React10__namespace.createElement(
+    ), /* @__PURE__ */ React14__namespace.createElement(
       hugeiconsReact.Tick01Icon,
       {
         className: cn(
@@ -336,7 +336,7 @@ var Checkbox = React10__namespace.forwardRef(
         ),
         strokeWidth: 3
       }
-    ), indeterminate && /* @__PURE__ */ React10__namespace.createElement(
+    ), indeterminate && /* @__PURE__ */ React14__namespace.createElement(
       hugeiconsReact.MinusSignIcon,
       {
         className: "absolute h-3.5 w-3.5 left-[3px] top-[3px] text-primary-foreground pointer-events-none",
@@ -346,12 +346,12 @@ var Checkbox = React10__namespace.forwardRef(
   }
 );
 Checkbox.displayName = "Checkbox";
-var RadioGroupContext = React10__namespace.createContext(null);
-var RadioGroup = React10__namespace.forwardRef(
+var RadioGroupContext = React14__namespace.createContext(null);
+var RadioGroup = React14__namespace.forwardRef(
   ({ className, value, defaultValue, onValueChange, name = "radio-group", orientation = "vertical", children, ...props }, ref) => {
-    const [internalValue, setInternalValue] = React10__namespace.useState(defaultValue || "");
+    const [internalValue, setInternalValue] = React14__namespace.useState(defaultValue || "");
     const currentValue = value !== void 0 ? value : internalValue;
-    const handleChange = React10__namespace.useCallback(
+    const handleChange = React14__namespace.useCallback(
       (newValue) => {
         if (value === void 0) {
           setInternalValue(newValue);
@@ -360,7 +360,7 @@ var RadioGroup = React10__namespace.forwardRef(
       },
       [value, onValueChange]
     );
-    return /* @__PURE__ */ React10__namespace.createElement(RadioGroupContext.Provider, { value: { name, value: currentValue, onChange: handleChange } }, /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(RadioGroupContext.Provider, { value: { name, value: currentValue, onChange: handleChange } }, /* @__PURE__ */ React14__namespace.createElement(
       "div",
       {
         ref,
@@ -376,9 +376,9 @@ var RadioGroup = React10__namespace.forwardRef(
   }
 );
 RadioGroup.displayName = "RadioGroup";
-var RadioGroupItem = React10__namespace.forwardRef(
+var RadioGroupItem = React14__namespace.forwardRef(
   ({ className, value, id, ...props }, ref) => {
-    const context = React10__namespace.useContext(RadioGroupContext);
+    const context = React14__namespace.useContext(RadioGroupContext);
     if (!context) {
       throw new Error("RadioGroupItem must be used within a RadioGroup");
     }
@@ -386,7 +386,7 @@ var RadioGroupItem = React10__namespace.forwardRef(
     const handleChange = () => {
       context.onChange(value);
     };
-    return /* @__PURE__ */ React10__namespace.createElement("label", { className: "relative inline-flex items-center cursor-pointer" }, /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement("label", { className: "relative inline-flex items-center cursor-pointer" }, /* @__PURE__ */ React14__namespace.createElement(
       "input",
       {
         type: "radio",
@@ -402,7 +402,7 @@ var RadioGroupItem = React10__namespace.forwardRef(
         ),
         ...props
       }
-    ), /* @__PURE__ */ React10__namespace.createElement(
+    ), /* @__PURE__ */ React14__namespace.createElement(
       "div",
       {
         className: cn(
@@ -414,7 +414,7 @@ var RadioGroupItem = React10__namespace.forwardRef(
   }
 );
 RadioGroupItem.displayName = "RadioGroupItem";
-var Switch = React10__namespace.forwardRef(({ className, size = "default", ...props }, ref) => {
+var Switch = React14__namespace.forwardRef(({ className, size = "default", ...props }, ref) => {
   const sizeClasses = {
     sm: {
       root: "h-5 w-9",
@@ -429,7 +429,7 @@ var Switch = React10__namespace.forwardRef(({ className, size = "default", ...pr
       thumb: "h-7 w-7 data-[state=checked]:translate-x-6"
     }
   };
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     SwitchPrimitives__namespace.Root,
     {
       className: cn(
@@ -440,7 +440,7 @@ var Switch = React10__namespace.forwardRef(({ className, size = "default", ...pr
       ...props,
       ref
     },
-    /* @__PURE__ */ React10__namespace.createElement(
+    /* @__PURE__ */ React14__namespace.createElement(
       SwitchPrimitives__namespace.Thumb,
       {
         className: cn(
@@ -452,9 +452,9 @@ var Switch = React10__namespace.forwardRef(({ className, size = "default", ...pr
   );
 });
 Switch.displayName = SwitchPrimitives__namespace.Root.displayName;
-var Slider = React10__namespace.forwardRef(
+var Slider = React14__namespace.forwardRef(
   ({ className, showValue, value, defaultValue = 50, variant = "primary", onValueChange, min = 0, max = 100, ...props }, ref) => {
-    const [internalValue, setInternalValue] = React10__namespace.useState(Number(defaultValue));
+    const [internalValue, setInternalValue] = React14__namespace.useState(Number(defaultValue));
     const currentValue = value !== void 0 ? Number(value) : internalValue;
     const minVal = Number(min);
     const maxVal = Number(max);
@@ -481,7 +481,7 @@ var Slider = React10__namespace.forwardRef(
       primary: "hsl(var(--primary) / 0.2)",
       success: "hsl(var(--success) / 0.2)"
     };
-    return /* @__PURE__ */ React10__namespace.createElement("div", { className: "relative flex items-center gap-4" }, /* @__PURE__ */ React10__namespace.createElement("div", { className: "relative flex-1" }, /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement("div", { className: "relative flex items-center gap-4" }, /* @__PURE__ */ React14__namespace.createElement("div", { className: "relative flex-1" }, /* @__PURE__ */ React14__namespace.createElement(
       "input",
       {
         type: "range",
@@ -503,14 +503,14 @@ var Slider = React10__namespace.forwardRef(
         ),
         ...props
       }
-    )), showValue && /* @__PURE__ */ React10__namespace.createElement("span", { className: "text-sm font-semibold text-foreground min-w-[3ch] text-right" }, currentValue));
+    )), showValue && /* @__PURE__ */ React14__namespace.createElement("span", { className: "text-sm font-semibold text-foreground min-w-[3ch] text-right" }, currentValue));
   }
 );
 Slider.displayName = "Slider";
 var Select = SelectPrimitive__namespace.Root;
 var SelectGroup = SelectPrimitive__namespace.Group;
 var SelectValue = SelectPrimitive__namespace.Value;
-var SelectTrigger = React10__namespace.forwardRef(({ className, children, error, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var SelectTrigger = React14__namespace.forwardRef(({ className, children, error, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   SelectPrimitive__namespace.Trigger,
   {
     ref,
@@ -522,10 +522,10 @@ var SelectTrigger = React10__namespace.forwardRef(({ className, children, error,
     ...props
   },
   children,
-  /* @__PURE__ */ React10__namespace.createElement(SelectPrimitive__namespace.Icon, { asChild: true }, /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.ArrowDown01Icon, { className: "h-5 w-5 opacity-50" }))
+  /* @__PURE__ */ React14__namespace.createElement(SelectPrimitive__namespace.Icon, { asChild: true }, /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.ArrowDown01Icon, { className: "h-5 w-5 opacity-50" }))
 ));
 SelectTrigger.displayName = SelectPrimitive__namespace.Trigger.displayName;
-var SelectScrollUpButton = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var SelectScrollUpButton = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   SelectPrimitive__namespace.ScrollUpButton,
   {
     ref,
@@ -535,10 +535,10 @@ var SelectScrollUpButton = React10__namespace.forwardRef(({ className, ...props 
     ),
     ...props
   },
-  /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.ArrowUp01Icon, { className: "h-5 w-5" })
+  /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.ArrowUp01Icon, { className: "h-5 w-5" })
 ));
 SelectScrollUpButton.displayName = SelectPrimitive__namespace.ScrollUpButton.displayName;
-var SelectScrollDownButton = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var SelectScrollDownButton = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   SelectPrimitive__namespace.ScrollDownButton,
   {
     ref,
@@ -548,10 +548,10 @@ var SelectScrollDownButton = React10__namespace.forwardRef(({ className, ...prop
     ),
     ...props
   },
-  /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.ArrowDown01Icon, { className: "h-5 w-5" })
+  /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.ArrowDown01Icon, { className: "h-5 w-5" })
 ));
 SelectScrollDownButton.displayName = SelectPrimitive__namespace.ScrollDownButton.displayName;
-var SelectContent = React10__namespace.forwardRef(({ className, children, position = "popper", ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(SelectPrimitive__namespace.Portal, null, /* @__PURE__ */ React10__namespace.createElement(
+var SelectContent = React14__namespace.forwardRef(({ className, children, position = "popper", ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(SelectPrimitive__namespace.Portal, null, /* @__PURE__ */ React14__namespace.createElement(
   SelectPrimitive__namespace.Content,
   {
     ref,
@@ -563,8 +563,8 @@ var SelectContent = React10__namespace.forwardRef(({ className, children, positi
     position,
     ...props
   },
-  /* @__PURE__ */ React10__namespace.createElement(SelectScrollUpButton, null),
-  /* @__PURE__ */ React10__namespace.createElement(
+  /* @__PURE__ */ React14__namespace.createElement(SelectScrollUpButton, null),
+  /* @__PURE__ */ React14__namespace.createElement(
     SelectPrimitive__namespace.Viewport,
     {
       className: cn(
@@ -574,10 +574,10 @@ var SelectContent = React10__namespace.forwardRef(({ className, children, positi
     },
     children
   ),
-  /* @__PURE__ */ React10__namespace.createElement(SelectScrollDownButton, null)
+  /* @__PURE__ */ React14__namespace.createElement(SelectScrollDownButton, null)
 )));
 SelectContent.displayName = SelectPrimitive__namespace.Content.displayName;
-var SelectLabel = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var SelectLabel = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   SelectPrimitive__namespace.Label,
   {
     ref,
@@ -586,7 +586,7 @@ var SelectLabel = React10__namespace.forwardRef(({ className, ...props }, ref) =
   }
 ));
 SelectLabel.displayName = SelectPrimitive__namespace.Label.displayName;
-var SelectItem = React10__namespace.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var SelectItem = React14__namespace.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   SelectPrimitive__namespace.Item,
   {
     ref,
@@ -596,11 +596,11 @@ var SelectItem = React10__namespace.forwardRef(({ className, children, ...props 
     ),
     ...props
   },
-  /* @__PURE__ */ React10__namespace.createElement("span", { className: "absolute left-3 flex h-5 w-5 items-center justify-center" }, /* @__PURE__ */ React10__namespace.createElement(SelectPrimitive__namespace.ItemIndicator, null, /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.Tick01Icon, { className: "h-5 w-5 text-primary" }))),
-  /* @__PURE__ */ React10__namespace.createElement(SelectPrimitive__namespace.ItemText, null, children)
+  /* @__PURE__ */ React14__namespace.createElement("span", { className: "absolute left-3 flex h-5 w-5 items-center justify-center" }, /* @__PURE__ */ React14__namespace.createElement(SelectPrimitive__namespace.ItemIndicator, null, /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.Tick01Icon, { className: "h-5 w-5 text-primary" }))),
+  /* @__PURE__ */ React14__namespace.createElement(SelectPrimitive__namespace.ItemText, null, children)
 ));
 SelectItem.displayName = SelectPrimitive__namespace.Item.displayName;
-var SelectSeparator = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var SelectSeparator = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   SelectPrimitive__namespace.Separator,
   {
     ref,
@@ -609,13 +609,13 @@ var SelectSeparator = React10__namespace.forwardRef(({ className, ...props }, re
   }
 ));
 SelectSeparator.displayName = SelectPrimitive__namespace.Separator.displayName;
-var Card = React10__namespace.forwardRef(({ className, hover, gradient, variant = "default", ...props }, ref) => {
+var Card = React14__namespace.forwardRef(({ className, hover, gradient, variant = "default", ...props }, ref) => {
   const variantClasses = {
     default: "bg-card border border-border",
     outline: "bg-transparent border border-border",
     filled: "bg-secondary border-0"
   };
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     "div",
     {
       ref,
@@ -631,7 +631,7 @@ var Card = React10__namespace.forwardRef(({ className, hover, gradient, variant 
   );
 });
 Card.displayName = "Card";
-var CardHeader = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var CardHeader = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "div",
   {
     ref,
@@ -640,7 +640,7 @@ var CardHeader = React10__namespace.forwardRef(({ className, ...props }, ref) =>
   }
 ));
 CardHeader.displayName = "CardHeader";
-var CardTitle = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var CardTitle = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "h3",
   {
     ref,
@@ -652,7 +652,7 @@ var CardTitle = React10__namespace.forwardRef(({ className, ...props }, ref) => 
   }
 ));
 CardTitle.displayName = "CardTitle";
-var CardDescription = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var CardDescription = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "p",
   {
     ref,
@@ -661,9 +661,9 @@ var CardDescription = React10__namespace.forwardRef(({ className, ...props }, re
   }
 ));
 CardDescription.displayName = "CardDescription";
-var CardContent = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement("div", { ref, className: cn("p-5 pt-0", className), ...props }));
+var CardContent = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement("div", { ref, className: cn("p-5 pt-0", className), ...props }));
 CardContent.displayName = "CardContent";
-var CardFooter = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var CardFooter = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "div",
   {
     ref,
@@ -672,10 +672,10 @@ var CardFooter = React10__namespace.forwardRef(({ className, ...props }, ref) =>
   }
 ));
 CardFooter.displayName = "CardFooter";
-var Separator2 = React10__namespace.forwardRef(
+var Separator2 = React14__namespace.forwardRef(
   ({ className, orientation = "horizontal", decorative = true, label, ...props }, ref) => {
     if (label) {
-      return /* @__PURE__ */ React10__namespace.createElement("div", { className: "flex items-center gap-4 my-4" }, /* @__PURE__ */ React10__namespace.createElement(
+      return /* @__PURE__ */ React14__namespace.createElement("div", { className: "flex items-center gap-4 my-4" }, /* @__PURE__ */ React14__namespace.createElement(
         SeparatorPrimitive__namespace.Root,
         {
           ref,
@@ -687,7 +687,7 @@ var Separator2 = React10__namespace.forwardRef(
           ),
           ...props
         }
-      ), /* @__PURE__ */ React10__namespace.createElement("span", { className: "text-sm text-muted-foreground font-medium" }, label), /* @__PURE__ */ React10__namespace.createElement(
+      ), /* @__PURE__ */ React14__namespace.createElement("span", { className: "text-sm text-muted-foreground font-medium" }, label), /* @__PURE__ */ React14__namespace.createElement(
         SeparatorPrimitive__namespace.Root,
         {
           decorative,
@@ -699,7 +699,7 @@ var Separator2 = React10__namespace.forwardRef(
         }
       ));
     }
-    return /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(
       SeparatorPrimitive__namespace.Root,
       {
         ref,
@@ -717,13 +717,13 @@ var Separator2 = React10__namespace.forwardRef(
 );
 Separator2.displayName = SeparatorPrimitive__namespace.Root.displayName;
 var Tabs = TabsPrimitive__namespace.Root;
-var TabsUnderlineContext = React10__namespace.createContext(null);
-var TabsList = React10__namespace.forwardRef(({ className, variant = "default", ...props }, ref) => {
-  const [indicatorStyle, setIndicatorStyle] = React10__namespace.useState({});
-  const [activeValue, setActiveValue] = React10__namespace.useState();
-  const triggersRef = React10__namespace.useRef(/* @__PURE__ */ new Map());
-  const listRef = React10__namespace.useRef(null);
-  const updateIndicator = React10__namespace.useCallback(() => {
+var TabsUnderlineContext = React14__namespace.createContext(null);
+var TabsList = React14__namespace.forwardRef(({ className, variant = "default", ...props }, ref) => {
+  const [indicatorStyle, setIndicatorStyle] = React14__namespace.useState({});
+  const [activeValue, setActiveValue] = React14__namespace.useState();
+  const triggersRef = React14__namespace.useRef(/* @__PURE__ */ new Map());
+  const listRef = React14__namespace.useRef(null);
+  const updateIndicator = React14__namespace.useCallback(() => {
     if (variant !== "underline" || !listRef.current) return;
     const activeButton = Array.from(triggersRef.current.values()).find(
       (btn) => btn.getAttribute("data-state") === "active"
@@ -738,7 +738,7 @@ var TabsList = React10__namespace.forwardRef(({ className, variant = "default", 
       setActiveValue(activeButton.getAttribute("data-value") || void 0);
     }
   }, [variant]);
-  const registerTrigger = React10__namespace.useCallback((value, element) => {
+  const registerTrigger = React14__namespace.useCallback((value, element) => {
     if (element) {
       triggersRef.current.set(value, element);
     } else {
@@ -746,7 +746,7 @@ var TabsList = React10__namespace.forwardRef(({ className, variant = "default", 
     }
     updateIndicator();
   }, [updateIndicator]);
-  React10__namespace.useEffect(() => {
+  React14__namespace.useEffect(() => {
     updateIndicator();
     const observer = new MutationObserver(updateIndicator);
     triggersRef.current.forEach((element) => {
@@ -754,7 +754,7 @@ var TabsList = React10__namespace.forwardRef(({ className, variant = "default", 
     });
     return () => observer.disconnect();
   }, [updateIndicator, props.children]);
-  React10__namespace.useEffect(() => {
+  React14__namespace.useEffect(() => {
     window.addEventListener("resize", updateIndicator);
     return () => window.removeEventListener("resize", updateIndicator);
   }, [updateIndicator]);
@@ -763,7 +763,7 @@ var TabsList = React10__namespace.forwardRef(({ className, variant = "default", 
     pills: "gap-2",
     underline: "gap-4"
   };
-  const setRefs = React10__namespace.useCallback((node) => {
+  const setRefs = React14__namespace.useCallback((node) => {
     listRef.current = node;
     if (typeof ref === "function") {
       ref(node);
@@ -771,7 +771,7 @@ var TabsList = React10__namespace.forwardRef(({ className, variant = "default", 
       ref.current = node;
     }
   }, [ref]);
-  return /* @__PURE__ */ React10__namespace.createElement(TabsUnderlineContext.Provider, { value: { registerTrigger, activeValue } }, /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(TabsUnderlineContext.Provider, { value: { registerTrigger, activeValue } }, /* @__PURE__ */ React14__namespace.createElement(
     TabsPrimitive__namespace.List,
     {
       ref: setRefs,
@@ -783,7 +783,7 @@ var TabsList = React10__namespace.forwardRef(({ className, variant = "default", 
       ...props
     },
     props.children,
-    variant === "underline" && /* @__PURE__ */ React10__namespace.createElement(
+    variant === "underline" && /* @__PURE__ */ React14__namespace.createElement(
       "span",
       {
         className: "absolute bottom-0 left-0 h-0.5 bg-foreground transition-all duration-300 ease-out",
@@ -793,16 +793,16 @@ var TabsList = React10__namespace.forwardRef(({ className, variant = "default", 
   ));
 });
 TabsList.displayName = TabsPrimitive__namespace.List.displayName;
-var TabsTrigger = React10__namespace.forwardRef(({ className, variant = "default", value, ...props }, ref) => {
-  const context = React10__namespace.useContext(TabsUnderlineContext);
-  const triggerRef = React10__namespace.useRef(null);
-  React10__namespace.useEffect(() => {
+var TabsTrigger = React14__namespace.forwardRef(({ className, variant = "default", value, ...props }, ref) => {
+  const context = React14__namespace.useContext(TabsUnderlineContext);
+  const triggerRef = React14__namespace.useRef(null);
+  React14__namespace.useEffect(() => {
     if (context && value) {
       context.registerTrigger(value, triggerRef.current);
       return () => context.registerTrigger(value, null);
     }
   }, [context, value]);
-  const setRefs = React10__namespace.useCallback((node) => {
+  const setRefs = React14__namespace.useCallback((node) => {
     triggerRef.current = node;
     if (typeof ref === "function") {
       ref(node);
@@ -815,7 +815,7 @@ var TabsTrigger = React10__namespace.forwardRef(({ className, variant = "default
     pills: "rounded-full px-4 py-2 bg-secondary text-muted-foreground data-[state=active]:bg-neutral-900 data-[state=active]:text-white dark:data-[state=active]:bg-white dark:data-[state=active]:text-neutral-900",
     underline: "pb-3 px-1 data-[state=active]:text-foreground rounded-none"
   };
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     TabsPrimitive__namespace.Trigger,
     {
       ref: setRefs,
@@ -831,7 +831,7 @@ var TabsTrigger = React10__namespace.forwardRef(({ className, variant = "default
   );
 });
 TabsTrigger.displayName = TabsPrimitive__namespace.Trigger.displayName;
-var TabsContent = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var TabsContent = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   TabsPrimitive__namespace.Content,
   {
     ref,
@@ -843,6 +843,197 @@ var TabsContent = React10__namespace.forwardRef(({ className, ...props }, ref) =
   }
 ));
 TabsContent.displayName = TabsPrimitive__namespace.Content.displayName;
+var SidebarContext = React14__namespace.createContext(
+  void 0
+);
+function useSidebar() {
+  const context = React14__namespace.useContext(SidebarContext);
+  if (!context) {
+    throw new Error("useSidebar must be used within a SidebarProvider");
+  }
+  return context;
+}
+var sidebarVariants = classVarianceAuthority.cva(
+  "flex flex-col bg-card border-border transition-all duration-300 ease-in-out",
+  {
+    variants: {
+      variant: {
+        default: "border-r",
+        floating: "m-3 rounded-2xl border",
+        inset: "bg-secondary/30"
+      },
+      side: {
+        left: "",
+        right: "border-l border-r-0"
+      }
+    },
+    defaultVariants: {
+      variant: "default",
+      side: "left"
+    }
+  }
+);
+function SidebarProvider({
+  children,
+  defaultExpanded = true
+}) {
+  const [expanded, setExpanded] = React14__namespace.useState(defaultExpanded);
+  const [isMobile, setIsMobile] = React14__namespace.useState(false);
+  React14__namespace.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+      if (window.innerWidth < 768) {
+        setExpanded(false);
+      }
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+  return /* @__PURE__ */ React14__namespace.createElement(SidebarContext.Provider, { value: { expanded, setExpanded, isMobile } }, children);
+}
+var Sidebar = React14__namespace.forwardRef(
+  ({ className, variant, side, collapsible = true, children, ...props }, ref) => {
+    const { expanded } = useSidebar();
+    return /* @__PURE__ */ React14__namespace.createElement(
+      "aside",
+      {
+        ref,
+        className: cn(
+          sidebarVariants({ variant, side }),
+          expanded ? "w-64" : "w-16",
+          "h-full relative flex-shrink-0",
+          className
+        ),
+        ...props
+      },
+      children
+    );
+  }
+);
+Sidebar.displayName = "Sidebar";
+var SidebarHeader = React14__namespace.forwardRef(({ className, children, ...props }, ref) => {
+  const { expanded } = useSidebar();
+  return /* @__PURE__ */ React14__namespace.createElement(
+    "div",
+    {
+      ref,
+      className: cn(
+        "flex items-center gap-3 p-4 border-b border-border",
+        !expanded && "justify-center",
+        className
+      ),
+      ...props
+    },
+    children
+  );
+});
+SidebarHeader.displayName = "SidebarHeader";
+var SidebarContent = React14__namespace.forwardRef(({ className, children, ...props }, ref) => {
+  return /* @__PURE__ */ React14__namespace.createElement(
+    "div",
+    {
+      ref,
+      className: cn("flex-1 min-h-0 overflow-y-auto overflow-x-hidden p-3 scrollbar-thin", className),
+      ...props
+    },
+    children
+  );
+});
+SidebarContent.displayName = "SidebarContent";
+var SidebarFooter = React14__namespace.forwardRef(({ className, children, ...props }, ref) => {
+  const { expanded } = useSidebar();
+  return /* @__PURE__ */ React14__namespace.createElement(
+    "div",
+    {
+      ref,
+      className: cn(
+        "p-3 border-t border-border mt-auto",
+        !expanded && "flex justify-center",
+        className
+      ),
+      ...props
+    },
+    children
+  );
+});
+SidebarFooter.displayName = "SidebarFooter";
+var SidebarGroup = React14__namespace.forwardRef(
+  ({ className, label, children, ...props }, ref) => {
+    const { expanded } = useSidebar();
+    return /* @__PURE__ */ React14__namespace.createElement("div", { ref, className: cn("mb-4", className), ...props }, label && expanded && /* @__PURE__ */ React14__namespace.createElement("div", { className: "px-3 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider" }, label), !expanded && label && /* @__PURE__ */ React14__namespace.createElement("div", { className: "h-px bg-border mx-3 my-2" }), /* @__PURE__ */ React14__namespace.createElement("div", { className: "space-y-1" }, children));
+  }
+);
+SidebarGroup.displayName = "SidebarGroup";
+var SidebarItem = React14__namespace.forwardRef(
+  ({ className, icon, active, badge, children, ...props }, ref) => {
+    const { expanded } = useSidebar();
+    return /* @__PURE__ */ React14__namespace.createElement(
+      "button",
+      {
+        ref,
+        className: cn(
+          "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200",
+          "hover:bg-accent text-foreground",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+          "active:scale-[0.98]",
+          active && "bg-primary/10 text-primary font-medium",
+          !expanded && "justify-center px-0",
+          className
+        ),
+        ...props
+      },
+      icon && /* @__PURE__ */ React14__namespace.createElement("span", { className: cn("flex-shrink-0", "[&_svg]:w-5 [&_svg]:h-5") }, icon),
+      expanded && /* @__PURE__ */ React14__namespace.createElement(React14__namespace.Fragment, null, /* @__PURE__ */ React14__namespace.createElement("span", { className: "flex-1 text-left text-sm truncate" }, children), badge && /* @__PURE__ */ React14__namespace.createElement("span", { className: "flex-shrink-0" }, badge))
+    );
+  }
+);
+SidebarItem.displayName = "SidebarItem";
+var SidebarTrigger = React14__namespace.forwardRef(({ className, ...props }, ref) => {
+  const { expanded, setExpanded } = useSidebar();
+  return /* @__PURE__ */ React14__namespace.createElement(
+    "button",
+    {
+      ref,
+      onClick: () => setExpanded(!expanded),
+      className: cn(
+        "absolute -right-3 top-6 z-10",
+        "flex items-center justify-center",
+        "h-6 w-6 rounded-full",
+        "bg-background border border-border",
+        "hover:bg-accent transition-colors duration-200",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+        className
+      ),
+      ...props
+    },
+    expanded ? /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.ArrowLeft01Icon, { className: "h-3.5 w-3.5" }) : /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.ArrowRight01Icon, { className: "h-3.5 w-3.5" })
+  );
+});
+SidebarTrigger.displayName = "SidebarTrigger";
+var SidebarSeparator = React14__namespace.forwardRef(({ className, ...props }, ref) => {
+  return /* @__PURE__ */ React14__namespace.createElement(
+    "div",
+    {
+      ref,
+      className: cn("h-px bg-border mx-3 my-3", className),
+      ...props
+    }
+  );
+});
+SidebarSeparator.displayName = "SidebarSeparator";
+var SidebarInset = React14__namespace.forwardRef(({ className, children, ...props }, ref) => {
+  return /* @__PURE__ */ React14__namespace.createElement(
+    "div",
+    {
+      ref,
+      className: cn("flex-1 overflow-auto", className),
+      ...props
+    },
+    children
+  );
+});
+SidebarInset.displayName = "SidebarInset";
 var badgeVariants = classVarianceAuthority.cva(
   "inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
@@ -870,11 +1061,11 @@ var badgeVariants = classVarianceAuthority.cva(
   }
 );
 function Badge({ className, variant, size, ...props }) {
-  return /* @__PURE__ */ React10__namespace.createElement("div", { className: cn(badgeVariants({ variant, size }), className), ...props });
+  return /* @__PURE__ */ React14__namespace.createElement("div", { className: cn(badgeVariants({ variant, size }), className), ...props });
 }
 function RedDot({ className, pulse, count: count2, ...props }) {
   if (count2 !== void 0 && count2 > 0) {
-    return /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(
       "span",
       {
         className: cn(
@@ -887,7 +1078,7 @@ function RedDot({ className, pulse, count: count2, ...props }) {
       count2 > 99 ? "99+" : count2
     );
   }
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     "span",
     {
       className: cn(
@@ -899,7 +1090,7 @@ function RedDot({ className, pulse, count: count2, ...props }) {
     }
   );
 }
-var Avatar = React10__namespace.forwardRef(({ className, size = "default", ...props }, ref) => {
+var Avatar = React14__namespace.forwardRef(({ className, size = "default", ...props }, ref) => {
   const sizeClasses = {
     xs: "h-6 w-6 text-[10px]",
     sm: "h-8 w-8 text-xs",
@@ -908,7 +1099,7 @@ var Avatar = React10__namespace.forwardRef(({ className, size = "default", ...pr
     xl: "h-16 w-16 text-lg",
     "2xl": "h-20 w-20 text-xl"
   };
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     "div",
     {
       ref,
@@ -922,7 +1113,7 @@ var Avatar = React10__namespace.forwardRef(({ className, size = "default", ...pr
   );
 });
 Avatar.displayName = "Avatar";
-var AvatarImage = React10__namespace.forwardRef(({ className, alt, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var AvatarImage = React14__namespace.forwardRef(({ className, alt, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "img",
   {
     ref,
@@ -932,7 +1123,7 @@ var AvatarImage = React10__namespace.forwardRef(({ className, alt, ...props }, r
   }
 ));
 AvatarImage.displayName = "AvatarImage";
-var AvatarFallback = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var AvatarFallback = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "div",
   {
     ref,
@@ -944,25 +1135,25 @@ var AvatarFallback = React10__namespace.forwardRef(({ className, ...props }, ref
   }
 ));
 AvatarFallback.displayName = "AvatarFallback";
-var AvatarGroup = React10__namespace.forwardRef(
+var AvatarGroup = React14__namespace.forwardRef(
   ({ className, max = 4, children, ...props }, ref) => {
-    const childArray = React10__namespace.Children.toArray(children);
+    const childArray = React14__namespace.Children.toArray(children);
     const excess = childArray.length - max;
     const visibleChildren = max ? childArray.slice(0, max) : childArray;
-    return /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(
       "div",
       {
         ref,
         className: cn("flex -space-x-3", className),
         ...props
       },
-      visibleChildren.map((child, index) => /* @__PURE__ */ React10__namespace.createElement("div", { key: index, className: "relative ring-2 ring-background rounded-full" }, child)),
-      excess > 0 && /* @__PURE__ */ React10__namespace.createElement(Avatar, { className: "ring-2 ring-background" }, /* @__PURE__ */ React10__namespace.createElement(AvatarFallback, { className: "bg-muted text-muted-foreground text-xs" }, "+", excess))
+      visibleChildren.map((child, index) => /* @__PURE__ */ React14__namespace.createElement("div", { key: index, className: "relative ring-2 ring-background rounded-full" }, child)),
+      excess > 0 && /* @__PURE__ */ React14__namespace.createElement(Avatar, { className: "ring-2 ring-background" }, /* @__PURE__ */ React14__namespace.createElement(AvatarFallback, { className: "bg-muted text-muted-foreground text-xs" }, "+", excess))
     );
   }
 );
 AvatarGroup.displayName = "AvatarGroup";
-var Table = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement("div", { className: "relative w-full overflow-auto" }, /* @__PURE__ */ React10__namespace.createElement(
+var Table = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement("div", { className: "relative w-full overflow-auto" }, /* @__PURE__ */ React14__namespace.createElement(
   "table",
   {
     ref,
@@ -971,9 +1162,9 @@ var Table = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @
   }
 )));
 Table.displayName = "Table";
-var TableHeader = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement("thead", { ref, className: cn("[&_tr]:border-b", className), ...props }));
+var TableHeader = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement("thead", { ref, className: cn("[&_tr]:border-b", className), ...props }));
 TableHeader.displayName = "TableHeader";
-var TableBody = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var TableBody = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "tbody",
   {
     ref,
@@ -982,7 +1173,7 @@ var TableBody = React10__namespace.forwardRef(({ className, ...props }, ref) => 
   }
 ));
 TableBody.displayName = "TableBody";
-var TableFooter = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var TableFooter = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "tfoot",
   {
     ref,
@@ -994,7 +1185,7 @@ var TableFooter = React10__namespace.forwardRef(({ className, ...props }, ref) =
   }
 ));
 TableFooter.displayName = "TableFooter";
-var TableRow = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var TableRow = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "tr",
   {
     ref,
@@ -1006,7 +1197,7 @@ var TableRow = React10__namespace.forwardRef(({ className, ...props }, ref) => /
   }
 ));
 TableRow.displayName = "TableRow";
-var TableHead = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var TableHead = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "th",
   {
     ref,
@@ -1018,7 +1209,7 @@ var TableHead = React10__namespace.forwardRef(({ className, ...props }, ref) => 
   }
 ));
 TableHead.displayName = "TableHead";
-var TableCell = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var TableCell = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "td",
   {
     ref,
@@ -1027,7 +1218,7 @@ var TableCell = React10__namespace.forwardRef(({ className, ...props }, ref) => 
   }
 ));
 TableCell.displayName = "TableCell";
-var TableCaption = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var TableCaption = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "caption",
   {
     ref,
@@ -1053,7 +1244,7 @@ var alertVariants = classVarianceAuthority.cva(
     }
   }
 );
-var Alert = React10__namespace.forwardRef(({ className, variant, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var Alert = React14__namespace.forwardRef(({ className, variant, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "div",
   {
     ref,
@@ -1063,7 +1254,7 @@ var Alert = React10__namespace.forwardRef(({ className, variant, ...props }, ref
   }
 ));
 Alert.displayName = "Alert";
-var AlertTitle = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var AlertTitle = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "h5",
   {
     ref,
@@ -1072,7 +1263,7 @@ var AlertTitle = React10__namespace.forwardRef(({ className, ...props }, ref) =>
   }
 ));
 AlertTitle.displayName = "AlertTitle";
-var AlertDescription = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var AlertDescription = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   "div",
   {
     ref,
@@ -1081,7 +1272,7 @@ var AlertDescription = React10__namespace.forwardRef(({ className, ...props }, r
   }
 ));
 AlertDescription.displayName = "AlertDescription";
-var Progress = React10__namespace.forwardRef(
+var Progress = React14__namespace.forwardRef(
   ({
     className,
     value = 0,
@@ -1105,7 +1296,7 @@ var Progress = React10__namespace.forwardRef(
       default: "h-2.5",
       lg: "h-4"
     };
-    return /* @__PURE__ */ React10__namespace.createElement("div", { className: "relative" }, showLabel && /* @__PURE__ */ React10__namespace.createElement("div", { className: "flex justify-between mb-2" }, /* @__PURE__ */ React10__namespace.createElement("span", { className: "text-sm font-medium text-foreground" }, "Progress"), /* @__PURE__ */ React10__namespace.createElement("span", { className: "text-sm font-medium text-muted-foreground" }, Math.round(percentage), "%")), /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement("div", { className: "relative" }, showLabel && /* @__PURE__ */ React14__namespace.createElement("div", { className: "flex justify-between mb-2" }, /* @__PURE__ */ React14__namespace.createElement("span", { className: "text-sm font-medium text-foreground" }, "Progress"), /* @__PURE__ */ React14__namespace.createElement("span", { className: "text-sm font-medium text-muted-foreground" }, Math.round(percentage), "%")), /* @__PURE__ */ React14__namespace.createElement(
       "div",
       {
         ref,
@@ -1120,7 +1311,7 @@ var Progress = React10__namespace.forwardRef(
         ),
         ...props
       },
-      /* @__PURE__ */ React10__namespace.createElement(
+      /* @__PURE__ */ React14__namespace.createElement(
         "div",
         {
           className: cn(
@@ -1135,7 +1326,7 @@ var Progress = React10__namespace.forwardRef(
   }
 );
 Progress.displayName = "Progress";
-var Loading = React10__namespace.forwardRef(
+var Loading = React14__namespace.forwardRef(
   ({ className, size = "default", variant = "default", ...props }, ref) => {
     const sizeClasses = {
       sm: "h-4 w-4 border-[3px]",
@@ -1147,7 +1338,7 @@ var Loading = React10__namespace.forwardRef(
       primary: "border-transparent border-t-primary border-r-primary",
       secondary: "border-transparent border-t-secondary-foreground border-r-secondary-foreground"
     };
-    return /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(
       "div",
       {
         ref,
@@ -1237,7 +1428,7 @@ function SkeletonCard({
   );
 }
 var ToastProvider = ToastPrimitives__namespace.Provider;
-var ToastViewport = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var ToastViewport = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   ToastPrimitives__namespace.Viewport,
   {
     ref,
@@ -1266,8 +1457,8 @@ var toastVariants = classVarianceAuthority.cva(
     }
   }
 );
-var Toast = React10__namespace.forwardRef(({ className, variant, ...props }, ref) => {
-  return /* @__PURE__ */ React10__namespace.createElement(
+var Toast = React14__namespace.forwardRef(({ className, variant, ...props }, ref) => {
+  return /* @__PURE__ */ React14__namespace.createElement(
     ToastPrimitives__namespace.Root,
     {
       ref,
@@ -1277,7 +1468,7 @@ var Toast = React10__namespace.forwardRef(({ className, variant, ...props }, ref
   );
 });
 Toast.displayName = ToastPrimitives__namespace.Root.displayName;
-var ToastAction = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var ToastAction = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   ToastPrimitives__namespace.Action,
   {
     ref,
@@ -1289,7 +1480,7 @@ var ToastAction = React10__namespace.forwardRef(({ className, ...props }, ref) =
   }
 ));
 ToastAction.displayName = ToastPrimitives__namespace.Action.displayName;
-var ToastClose = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var ToastClose = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   ToastPrimitives__namespace.Close,
   {
     ref,
@@ -1300,10 +1491,10 @@ var ToastClose = React10__namespace.forwardRef(({ className, ...props }, ref) =>
     "toast-close": "",
     ...props
   },
-  /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.Cancel01Icon, { size: 18 })
+  /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.Cancel01Icon, { size: 18 })
 ));
 ToastClose.displayName = ToastPrimitives__namespace.Close.displayName;
-var ToastTitle = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var ToastTitle = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   ToastPrimitives__namespace.Title,
   {
     ref,
@@ -1312,7 +1503,7 @@ var ToastTitle = React10__namespace.forwardRef(({ className, ...props }, ref) =>
   }
 ));
 ToastTitle.displayName = ToastPrimitives__namespace.Title.displayName;
-var ToastDescription = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var ToastDescription = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   ToastPrimitives__namespace.Description,
   {
     ref,
@@ -1421,8 +1612,8 @@ function toast({ ...props }) {
   };
 }
 function useToast() {
-  const [state, setState] = React10__namespace.useState(memoryState);
-  React10__namespace.useEffect(() => {
+  const [state, setState] = React14__namespace.useState(memoryState);
+  React14__namespace.useEffect(() => {
     listeners.push(setState);
     return () => {
       const index = listeners.indexOf(setState);
@@ -1449,7 +1640,7 @@ var Dialog = DialogPrimitive__namespace.Root;
 var DialogTrigger = DialogPrimitive__namespace.Trigger;
 var DialogPortal = DialogPrimitive__namespace.Portal;
 var DialogClose = DialogPrimitive__namespace.Close;
-var DialogOverlay = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var DialogOverlay = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DialogPrimitive__namespace.Overlay,
   {
     ref,
@@ -1461,7 +1652,7 @@ var DialogOverlay = React10__namespace.forwardRef(({ className, ...props }, ref)
   }
 ));
 DialogOverlay.displayName = DialogPrimitive__namespace.Overlay.displayName;
-var DialogContent = React10__namespace.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(DialogPortal, null, /* @__PURE__ */ React10__namespace.createElement(DialogOverlay, { className: "flex items-center justify-center" }), /* @__PURE__ */ React10__namespace.createElement("div", { className: "fixed inset-0 z-50 flex items-center justify-center" }, /* @__PURE__ */ React10__namespace.createElement(
+var DialogContent = React14__namespace.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(DialogPortal, null, /* @__PURE__ */ React14__namespace.createElement(DialogOverlay, { className: "flex items-center justify-center" }), /* @__PURE__ */ React14__namespace.createElement("div", { className: "fixed inset-0 z-50 flex items-center justify-center" }, /* @__PURE__ */ React14__namespace.createElement(
   DialogPrimitive__namespace.Content,
   {
     ref,
@@ -1472,13 +1663,13 @@ var DialogContent = React10__namespace.forwardRef(({ className, children, ...pro
     ...props
   },
   children,
-  /* @__PURE__ */ React10__namespace.createElement(DialogPrimitive__namespace.Close, { className: "absolute right-4 top-4 rounded-xl p-2 opacity-70 transition-all hover:opacity-100 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring disabled:pointer-events-none" }, /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.Cancel01Icon, { size: 20 }), /* @__PURE__ */ React10__namespace.createElement("span", { className: "sr-only" }, "Close"))
+  /* @__PURE__ */ React14__namespace.createElement(DialogPrimitive__namespace.Close, { className: "absolute right-4 top-4 rounded-xl p-2 opacity-70 transition-all hover:opacity-100 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring disabled:pointer-events-none" }, /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.Cancel01Icon, { size: 20 }), /* @__PURE__ */ React14__namespace.createElement("span", { className: "sr-only" }, "Close"))
 ))));
 DialogContent.displayName = DialogPrimitive__namespace.Content.displayName;
 var DialogHeader = ({
   className,
   ...props
-}) => /* @__PURE__ */ React10__namespace.createElement(
+}) => /* @__PURE__ */ React14__namespace.createElement(
   "div",
   {
     className: cn(
@@ -1492,7 +1683,7 @@ DialogHeader.displayName = "DialogHeader";
 var DialogFooter = ({
   className,
   ...props
-}) => /* @__PURE__ */ React10__namespace.createElement(
+}) => /* @__PURE__ */ React14__namespace.createElement(
   "div",
   {
     className: cn(
@@ -1503,7 +1694,7 @@ var DialogFooter = ({
   }
 );
 DialogFooter.displayName = "DialogFooter";
-var DialogTitle = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var DialogTitle = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DialogPrimitive__namespace.Title,
   {
     ref,
@@ -1515,7 +1706,7 @@ var DialogTitle = React10__namespace.forwardRef(({ className, ...props }, ref) =
   }
 ));
 DialogTitle.displayName = DialogPrimitive__namespace.Title.displayName;
-var DialogDescription = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var DialogDescription = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DialogPrimitive__namespace.Description,
   {
     ref,
@@ -1528,7 +1719,7 @@ var Sheet = DialogPrimitive__namespace.Root;
 var SheetTrigger = DialogPrimitive__namespace.Trigger;
 var SheetClose = DialogPrimitive__namespace.Close;
 var SheetPortal = DialogPrimitive__namespace.Portal;
-var SheetOverlay = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var SheetOverlay = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DialogPrimitive__namespace.Overlay,
   {
     className: cn(
@@ -1556,22 +1747,22 @@ var sheetVariants = classVarianceAuthority.cva(
     }
   }
 );
-var SheetContent = React10__namespace.forwardRef(({ side = "bottom", className, children, showHandle = true, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(SheetPortal, null, /* @__PURE__ */ React10__namespace.createElement(SheetOverlay, null), /* @__PURE__ */ React10__namespace.createElement(
+var SheetContent = React14__namespace.forwardRef(({ side = "bottom", className, children, showHandle = true, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(SheetPortal, null, /* @__PURE__ */ React14__namespace.createElement(SheetOverlay, null), /* @__PURE__ */ React14__namespace.createElement(
   DialogPrimitive__namespace.Content,
   {
     ref,
     className: cn(sheetVariants({ side }), "p-6", className),
     ...props
   },
-  side === "bottom" && showHandle && /* @__PURE__ */ React10__namespace.createElement("div", { className: "absolute top-3 left-1/2 -translate-x-1/2" }, /* @__PURE__ */ React10__namespace.createElement("div", { className: "w-12 h-1.5 rounded-full bg-muted-foreground/30" })),
-  side !== "bottom" && /* @__PURE__ */ React10__namespace.createElement(DialogPrimitive__namespace.Close, { className: "absolute right-4 top-4 rounded-xl p-2 opacity-70 transition-all hover:opacity-100 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring disabled:pointer-events-none" }, /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.Cancel01Icon, { size: 20 }), /* @__PURE__ */ React10__namespace.createElement("span", { className: "sr-only" }, "Close")),
-  /* @__PURE__ */ React10__namespace.createElement("div", { className: side === "bottom" ? "pt-4" : "" }, children)
+  side === "bottom" && showHandle && /* @__PURE__ */ React14__namespace.createElement("div", { className: "absolute top-3 left-1/2 -translate-x-1/2" }, /* @__PURE__ */ React14__namespace.createElement("div", { className: "w-12 h-1.5 rounded-full bg-muted-foreground/30" })),
+  side !== "bottom" && /* @__PURE__ */ React14__namespace.createElement(DialogPrimitive__namespace.Close, { className: "absolute right-4 top-4 rounded-xl p-2 opacity-70 transition-all hover:opacity-100 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring disabled:pointer-events-none" }, /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.Cancel01Icon, { size: 20 }), /* @__PURE__ */ React14__namespace.createElement("span", { className: "sr-only" }, "Close")),
+  /* @__PURE__ */ React14__namespace.createElement("div", { className: side === "bottom" ? "pt-4" : "" }, children)
 )));
 SheetContent.displayName = DialogPrimitive__namespace.Content.displayName;
 var SheetHeader = ({
   className,
   ...props
-}) => /* @__PURE__ */ React10__namespace.createElement(
+}) => /* @__PURE__ */ React14__namespace.createElement(
   "div",
   {
     className: cn(
@@ -1585,7 +1776,7 @@ SheetHeader.displayName = "SheetHeader";
 var SheetFooter = ({
   className,
   ...props
-}) => /* @__PURE__ */ React10__namespace.createElement(
+}) => /* @__PURE__ */ React14__namespace.createElement(
   "div",
   {
     className: cn(
@@ -1596,7 +1787,7 @@ var SheetFooter = ({
   }
 );
 SheetFooter.displayName = "SheetFooter";
-var SheetTitle = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var SheetTitle = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DialogPrimitive__namespace.Title,
   {
     ref,
@@ -1605,7 +1796,7 @@ var SheetTitle = React10__namespace.forwardRef(({ className, ...props }, ref) =>
   }
 ));
 SheetTitle.displayName = DialogPrimitive__namespace.Title.displayName;
-var SheetDescription = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var SheetDescription = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DialogPrimitive__namespace.Description,
   {
     ref,
@@ -1620,7 +1811,7 @@ var DropdownMenuGroup = DropdownMenuPrimitive__namespace.Group;
 var DropdownMenuPortal = DropdownMenuPrimitive__namespace.Portal;
 var DropdownMenuSub = DropdownMenuPrimitive__namespace.Sub;
 var DropdownMenuRadioGroup = DropdownMenuPrimitive__namespace.RadioGroup;
-var DropdownMenuSubTrigger = React10__namespace.forwardRef(({ className, inset, children, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var DropdownMenuSubTrigger = React14__namespace.forwardRef(({ className, inset, children, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DropdownMenuPrimitive__namespace.SubTrigger,
   {
     ref,
@@ -1632,10 +1823,10 @@ var DropdownMenuSubTrigger = React10__namespace.forwardRef(({ className, inset, 
     ...props
   },
   children,
-  /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.ArrowRight01Icon, { className: "ml-auto h-5 w-5" })
+  /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.ArrowRight01Icon, { className: "ml-auto h-5 w-5" })
 ));
 DropdownMenuSubTrigger.displayName = DropdownMenuPrimitive__namespace.SubTrigger.displayName;
-var DropdownMenuSubContent = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var DropdownMenuSubContent = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DropdownMenuPrimitive__namespace.SubContent,
   {
     ref,
@@ -1647,7 +1838,7 @@ var DropdownMenuSubContent = React10__namespace.forwardRef(({ className, ...prop
   }
 ));
 DropdownMenuSubContent.displayName = DropdownMenuPrimitive__namespace.SubContent.displayName;
-var DropdownMenuContent = React10__namespace.forwardRef(({ className, sideOffset = 8, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(DropdownMenuPrimitive__namespace.Portal, null, /* @__PURE__ */ React10__namespace.createElement(
+var DropdownMenuContent = React14__namespace.forwardRef(({ className, sideOffset = 8, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(DropdownMenuPrimitive__namespace.Portal, null, /* @__PURE__ */ React14__namespace.createElement(
   DropdownMenuPrimitive__namespace.Content,
   {
     ref,
@@ -1660,7 +1851,7 @@ var DropdownMenuContent = React10__namespace.forwardRef(({ className, sideOffset
   }
 )));
 DropdownMenuContent.displayName = DropdownMenuPrimitive__namespace.Content.displayName;
-var DropdownMenuItem = React10__namespace.forwardRef(({ className, inset, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var DropdownMenuItem = React14__namespace.forwardRef(({ className, inset, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DropdownMenuPrimitive__namespace.Item,
   {
     ref,
@@ -1673,7 +1864,7 @@ var DropdownMenuItem = React10__namespace.forwardRef(({ className, inset, ...pro
   }
 ));
 DropdownMenuItem.displayName = DropdownMenuPrimitive__namespace.Item.displayName;
-var DropdownMenuCheckboxItem = React10__namespace.forwardRef(({ className, children, checked, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var DropdownMenuCheckboxItem = React14__namespace.forwardRef(({ className, children, checked, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DropdownMenuPrimitive__namespace.CheckboxItem,
   {
     ref,
@@ -1684,11 +1875,11 @@ var DropdownMenuCheckboxItem = React10__namespace.forwardRef(({ className, child
     checked,
     ...props
   },
-  /* @__PURE__ */ React10__namespace.createElement("span", { className: "absolute left-3 flex h-5 w-5 items-center justify-center" }, /* @__PURE__ */ React10__namespace.createElement(DropdownMenuPrimitive__namespace.ItemIndicator, null, /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.Tick01Icon, { className: "h-5 w-5 text-primary" }))),
+  /* @__PURE__ */ React14__namespace.createElement("span", { className: "absolute left-3 flex h-5 w-5 items-center justify-center" }, /* @__PURE__ */ React14__namespace.createElement(DropdownMenuPrimitive__namespace.ItemIndicator, null, /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.Tick01Icon, { className: "h-5 w-5 text-primary" }))),
   children
 ));
 DropdownMenuCheckboxItem.displayName = DropdownMenuPrimitive__namespace.CheckboxItem.displayName;
-var DropdownMenuRadioItem = React10__namespace.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var DropdownMenuRadioItem = React14__namespace.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DropdownMenuPrimitive__namespace.RadioItem,
   {
     ref,
@@ -1698,11 +1889,11 @@ var DropdownMenuRadioItem = React10__namespace.forwardRef(({ className, children
     ),
     ...props
   },
-  /* @__PURE__ */ React10__namespace.createElement("span", { className: "absolute left-3 flex h-5 w-5 items-center justify-center" }, /* @__PURE__ */ React10__namespace.createElement(DropdownMenuPrimitive__namespace.ItemIndicator, null, /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.CircleIcon, { className: "h-3 w-3 fill-primary text-primary" }))),
+  /* @__PURE__ */ React14__namespace.createElement("span", { className: "absolute left-3 flex h-5 w-5 items-center justify-center" }, /* @__PURE__ */ React14__namespace.createElement(DropdownMenuPrimitive__namespace.ItemIndicator, null, /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.CircleIcon, { className: "h-3 w-3 fill-primary text-primary" }))),
   children
 ));
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive__namespace.RadioItem.displayName;
-var DropdownMenuLabel = React10__namespace.forwardRef(({ className, inset, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var DropdownMenuLabel = React14__namespace.forwardRef(({ className, inset, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DropdownMenuPrimitive__namespace.Label,
   {
     ref,
@@ -1715,7 +1906,7 @@ var DropdownMenuLabel = React10__namespace.forwardRef(({ className, inset, ...pr
   }
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive__namespace.Label.displayName;
-var DropdownMenuSeparator = React10__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var DropdownMenuSeparator = React14__namespace.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   DropdownMenuPrimitive__namespace.Separator,
   {
     ref,
@@ -1728,7 +1919,7 @@ var DropdownMenuShortcut = ({
   className,
   ...props
 }) => {
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     "span",
     {
       className: cn("ml-auto text-xs tracking-widest opacity-60", className),
@@ -1740,7 +1931,7 @@ DropdownMenuShortcut.displayName = "DropdownMenuShortcut";
 var TooltipProvider = TooltipPrimitive__namespace.Provider;
 var Tooltip = TooltipPrimitive__namespace.Root;
 var TooltipTrigger = TooltipPrimitive__namespace.Trigger;
-var TooltipContent = React10__namespace.forwardRef(({ className, sideOffset = 6, ...props }, ref) => /* @__PURE__ */ React10__namespace.createElement(
+var TooltipContent = React14__namespace.forwardRef(({ className, sideOffset = 6, ...props }, ref) => /* @__PURE__ */ React14__namespace.createElement(
   TooltipPrimitive__namespace.Content,
   {
     ref,
@@ -1753,18 +1944,18 @@ var TooltipContent = React10__namespace.forwardRef(({ className, sideOffset = 6,
   }
 ));
 TooltipContent.displayName = TooltipPrimitive__namespace.Content.displayName;
-var PopoverContext = React10__namespace.createContext(null);
+var PopoverContext = React14__namespace.createContext(null);
 var usePopover = () => {
-  const context = React10__namespace.useContext(PopoverContext);
+  const context = React14__namespace.useContext(PopoverContext);
   if (!context) {
     throw new Error("Popover components must be used within a Popover");
   }
   return context;
 };
 var Popover = ({ children, defaultOpen = false, open: controlledOpen, onOpenChange }) => {
-  const [uncontrolledOpen, setUncontrolledOpen] = React10__namespace.useState(defaultOpen);
+  const [uncontrolledOpen, setUncontrolledOpen] = React14__namespace.useState(defaultOpen);
   const open = controlledOpen !== void 0 ? controlledOpen : uncontrolledOpen;
-  const setOpen = React10__namespace.useCallback(
+  const setOpen = React14__namespace.useCallback(
     (newOpen) => {
       if (controlledOpen === void 0) {
         setUncontrolledOpen(newOpen);
@@ -1773,11 +1964,11 @@ var Popover = ({ children, defaultOpen = false, open: controlledOpen, onOpenChan
     },
     [controlledOpen, onOpenChange]
   );
-  return /* @__PURE__ */ React10__namespace.createElement(PopoverContext.Provider, { value: { open, setOpen } }, /* @__PURE__ */ React10__namespace.createElement("div", { className: "relative inline-block" }, children));
+  return /* @__PURE__ */ React14__namespace.createElement(PopoverContext.Provider, { value: { open, setOpen } }, /* @__PURE__ */ React14__namespace.createElement("div", { className: "relative inline-block" }, children));
 };
-var PopoverTrigger = React10__namespace.forwardRef(({ className, onClick, children, ...props }, ref) => {
+var PopoverTrigger = React14__namespace.forwardRef(({ className, onClick, children, ...props }, ref) => {
   const { open, setOpen } = usePopover();
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     "button",
     {
       ref,
@@ -1794,10 +1985,10 @@ var PopoverTrigger = React10__namespace.forwardRef(({ className, onClick, childr
   );
 });
 PopoverTrigger.displayName = "PopoverTrigger";
-var PopoverContent = React10__namespace.forwardRef(({ className, align = "center", side = "bottom", sideOffset = 8, ...props }, ref) => {
+var PopoverContent = React14__namespace.forwardRef(({ className, align = "center", side = "bottom", sideOffset = 8, ...props }, ref) => {
   const { open } = usePopover();
   if (!open) return null;
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     "div",
     {
       ref,
@@ -1817,16 +2008,16 @@ var PopoverContent = React10__namespace.forwardRef(({ className, align = "center
   );
 });
 PopoverContent.displayName = "PopoverContent";
-var AccordionContext = React10__namespace.createContext(null);
-var Accordion = React10__namespace.forwardRef(
+var AccordionContext = React14__namespace.createContext(null);
+var Accordion = React14__namespace.forwardRef(
   ({ className, type = "single", defaultValue, collapsible = true, children, ...props }, ref) => {
-    const [openItems, setOpenItems] = React10__namespace.useState(() => {
+    const [openItems, setOpenItems] = React14__namespace.useState(() => {
       if (defaultValue) {
         return Array.isArray(defaultValue) ? defaultValue : [defaultValue];
       }
       return [];
     });
-    const toggle = React10__namespace.useCallback(
+    const toggle = React14__namespace.useCallback(
       (value) => {
         setOpenItems((prev) => {
           if (type === "single") {
@@ -1844,13 +2035,13 @@ var Accordion = React10__namespace.forwardRef(
       },
       [type, collapsible]
     );
-    return /* @__PURE__ */ React10__namespace.createElement(AccordionContext.Provider, { value: { openItems, toggle, type } }, /* @__PURE__ */ React10__namespace.createElement("div", { ref, className: cn("space-y-2", className), ...props }, children));
+    return /* @__PURE__ */ React14__namespace.createElement(AccordionContext.Provider, { value: { openItems, toggle, type } }, /* @__PURE__ */ React14__namespace.createElement("div", { ref, className: cn("space-y-2", className), ...props }, children));
   }
 );
 Accordion.displayName = "Accordion";
-var AccordionItem = React10__namespace.forwardRef(
+var AccordionItem = React14__namespace.forwardRef(
   ({ className, value, children, ...props }, ref) => {
-    return /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(
       "div",
       {
         ref,
@@ -1858,9 +2049,9 @@ var AccordionItem = React10__namespace.forwardRef(
         className: cn("rounded-xl border border-border overflow-hidden", className),
         ...props
       },
-      React10__namespace.Children.map(children, (child) => {
-        if (React10__namespace.isValidElement(child)) {
-          return React10__namespace.cloneElement(child, { value });
+      React14__namespace.Children.map(children, (child) => {
+        if (React14__namespace.isValidElement(child)) {
+          return React14__namespace.cloneElement(child, { value });
         }
         return child;
       })
@@ -1868,12 +2059,12 @@ var AccordionItem = React10__namespace.forwardRef(
   }
 );
 AccordionItem.displayName = "AccordionItem";
-var AccordionTrigger = React10__namespace.forwardRef(
+var AccordionTrigger = React14__namespace.forwardRef(
   ({ className, children, value, ...props }, ref) => {
-    const context = React10__namespace.useContext(AccordionContext);
+    const context = React14__namespace.useContext(AccordionContext);
     if (!context) throw new Error("AccordionTrigger must be used within Accordion");
     const isOpen = value ? context.openItems.includes(value) : false;
-    return /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(
       "button",
       {
         ref,
@@ -1888,17 +2079,17 @@ var AccordionTrigger = React10__namespace.forwardRef(
         ...props
       },
       children,
-      /* @__PURE__ */ React10__namespace.createElement(hugeiconsReact.ArrowDown01Icon, { className: "h-5 w-5 shrink-0 transition-transform duration-200 text-muted-foreground" })
+      /* @__PURE__ */ React14__namespace.createElement(hugeiconsReact.ArrowDown01Icon, { className: "h-5 w-5 shrink-0 transition-transform duration-200 text-muted-foreground" })
     );
   }
 );
 AccordionTrigger.displayName = "AccordionTrigger";
-var AccordionContent = React10__namespace.forwardRef(
+var AccordionContent = React14__namespace.forwardRef(
   ({ className, children, value, ...props }, ref) => {
-    const context = React10__namespace.useContext(AccordionContext);
+    const context = React14__namespace.useContext(AccordionContext);
     if (!context) throw new Error("AccordionContent must be used within Accordion");
     const isOpen = value ? context.openItems.includes(value) : false;
-    return /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(
       "div",
       {
         ref,
@@ -1910,17 +2101,17 @@ var AccordionContent = React10__namespace.forwardRef(
         "data-state": isOpen ? "open" : "closed",
         ...props
       },
-      /* @__PURE__ */ React10__namespace.createElement("div", { className: "px-4 pb-4 pt-0 text-muted-foreground" }, children)
+      /* @__PURE__ */ React14__namespace.createElement("div", { className: "px-4 pb-4 pt-0 text-muted-foreground" }, children)
     );
   }
 );
 AccordionContent.displayName = "AccordionContent";
-var CollapsibleContext = React10__namespace.createContext(null);
-var Collapsible = React10__namespace.forwardRef(
+var CollapsibleContext = React14__namespace.createContext(null);
+var Collapsible = React14__namespace.forwardRef(
   ({ className, defaultOpen = false, open: controlledOpen, onOpenChange, children, ...props }, ref) => {
-    const [uncontrolledOpen, setUncontrolledOpen] = React10__namespace.useState(defaultOpen);
+    const [uncontrolledOpen, setUncontrolledOpen] = React14__namespace.useState(defaultOpen);
     const open = controlledOpen !== void 0 ? controlledOpen : uncontrolledOpen;
-    const setOpen = React10__namespace.useCallback(
+    const setOpen = React14__namespace.useCallback(
       (newOpen) => {
         if (controlledOpen === void 0) {
           setUncontrolledOpen(newOpen);
@@ -1929,7 +2120,7 @@ var Collapsible = React10__namespace.forwardRef(
       },
       [controlledOpen, onOpenChange]
     );
-    return /* @__PURE__ */ React10__namespace.createElement(CollapsibleContext.Provider, { value: { open, setOpen } }, /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(CollapsibleContext.Provider, { value: { open, setOpen } }, /* @__PURE__ */ React14__namespace.createElement(
       "div",
       {
         ref,
@@ -1942,10 +2133,10 @@ var Collapsible = React10__namespace.forwardRef(
   }
 );
 Collapsible.displayName = "Collapsible";
-var CollapsibleTrigger = React10__namespace.forwardRef(({ className, children, onClick, ...props }, ref) => {
-  const context = React10__namespace.useContext(CollapsibleContext);
+var CollapsibleTrigger = React14__namespace.forwardRef(({ className, children, onClick, ...props }, ref) => {
+  const context = React14__namespace.useContext(CollapsibleContext);
   if (!context) throw new Error("CollapsibleTrigger must be used within Collapsible");
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     "button",
     {
       ref,
@@ -1962,11 +2153,11 @@ var CollapsibleTrigger = React10__namespace.forwardRef(({ className, children, o
   );
 });
 CollapsibleTrigger.displayName = "CollapsibleTrigger";
-var CollapsibleContent = React10__namespace.forwardRef(({ className, children, ...props }, ref) => {
-  const context = React10__namespace.useContext(CollapsibleContext);
+var CollapsibleContent = React14__namespace.forwardRef(({ className, children, ...props }, ref) => {
+  const context = React14__namespace.useContext(CollapsibleContext);
   if (!context) throw new Error("CollapsibleContent must be used within Collapsible");
   if (!context.open) return null;
-  return /* @__PURE__ */ React10__namespace.createElement(
+  return /* @__PURE__ */ React14__namespace.createElement(
     "div",
     {
       ref,
@@ -1980,8 +2171,8 @@ var CollapsibleContent = React10__namespace.forwardRef(({ className, children, .
   );
 });
 CollapsibleContent.displayName = "CollapsibleContent";
-var ScrollArea = React10__namespace.forwardRef(({ className, children, orientation = "vertical", ...props }, ref) => {
-  return /* @__PURE__ */ React10__namespace.createElement(
+var ScrollArea = React14__namespace.forwardRef(({ className, children, orientation = "vertical", ...props }, ref) => {
+  return /* @__PURE__ */ React14__namespace.createElement(
     "div",
     {
       ref,
@@ -1999,8 +2190,8 @@ var ScrollArea = React10__namespace.forwardRef(({ className, children, orientati
   );
 });
 ScrollArea.displayName = "ScrollArea";
-var ScrollBar = React10__namespace.forwardRef(({ className, orientation = "vertical", ...props }, ref) => {
-  return /* @__PURE__ */ React10__namespace.createElement(
+var ScrollBar = React14__namespace.forwardRef(({ className, orientation = "vertical", ...props }, ref) => {
+  return /* @__PURE__ */ React14__namespace.createElement(
     "div",
     {
       ref,
@@ -2015,9 +2206,9 @@ var ScrollBar = React10__namespace.forwardRef(({ className, orientation = "verti
   );
 });
 ScrollBar.displayName = "ScrollBar";
-var AspectRatio = React10__namespace.forwardRef(
+var AspectRatio = React14__namespace.forwardRef(
   ({ className, ratio = 1, style, children, ...props }, ref) => {
-    return /* @__PURE__ */ React10__namespace.createElement(
+    return /* @__PURE__ */ React14__namespace.createElement(
       "div",
       {
         ref,
@@ -2028,14 +2219,14 @@ var AspectRatio = React10__namespace.forwardRef(
         },
         ...props
       },
-      /* @__PURE__ */ React10__namespace.createElement("div", { className: "absolute inset-0" }, children)
+      /* @__PURE__ */ React14__namespace.createElement("div", { className: "absolute inset-0" }, children)
     );
   }
 );
 AspectRatio.displayName = "AspectRatio";
 function useDebounce(value, delay) {
-  const [debouncedValue, setDebouncedValue] = React10__namespace.useState(value);
-  React10__namespace.useEffect(() => {
+  const [debouncedValue, setDebouncedValue] = React14__namespace.useState(value);
+  React14__namespace.useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedValue(value);
     }, delay);
@@ -2046,19 +2237,19 @@ function useDebounce(value, delay) {
   return debouncedValue;
 }
 function useDebouncedCallback(callback, delay) {
-  const callbackRef = React10__namespace.useRef(callback);
-  const timeoutRef = React10__namespace.useRef();
-  React10__namespace.useEffect(() => {
+  const callbackRef = React14__namespace.useRef(callback);
+  const timeoutRef = React14__namespace.useRef();
+  React14__namespace.useEffect(() => {
     callbackRef.current = callback;
   }, [callback]);
-  React10__namespace.useEffect(() => {
+  React14__namespace.useEffect(() => {
     return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
     };
   }, []);
-  return React10__namespace.useCallback(
+  return React14__namespace.useCallback(
     (...args) => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
@@ -2071,7 +2262,7 @@ function useDebouncedCallback(callback, delay) {
   );
 }
 function useLocalStorage(key, initialValue) {
-  const [storedValue, setStoredValue] = React10__namespace.useState(() => {
+  const [storedValue, setStoredValue] = React14__namespace.useState(() => {
     if (typeof window === "undefined") {
       return initialValue;
     }
@@ -2083,7 +2274,7 @@ function useLocalStorage(key, initialValue) {
       return initialValue;
     }
   });
-  const setValue = React10__namespace.useCallback(
+  const setValue = React14__namespace.useCallback(
     (value) => {
       try {
         const valueToStore = value instanceof Function ? value(storedValue) : value;
@@ -2100,8 +2291,8 @@ function useLocalStorage(key, initialValue) {
   return [storedValue, setValue];
 }
 function useMediaQuery(query) {
-  const [matches, setMatches] = React10__namespace.useState(false);
-  React10__namespace.useEffect(() => {
+  const [matches, setMatches] = React14__namespace.useState(false);
+  React14__namespace.useEffect(() => {
     const media = window.matchMedia(query);
     if (media.matches !== matches) {
       setMatches(media.matches);
@@ -2123,7 +2314,7 @@ function useIsTablet() {
 function useIsDesktop() {
   return useMediaQuery("(min-width: 1025px)");
 }
-var ThemeProviderContext = React10__namespace.createContext(
+var ThemeProviderContext = React14__namespace.createContext(
   void 0
 );
 function ThemeProvider({
@@ -2134,15 +2325,15 @@ function ThemeProvider({
   enableSystem = true,
   ...props
 }) {
-  const [theme, setTheme] = React10__namespace.useState(defaultTheme);
-  const [resolvedTheme, setResolvedTheme] = React10__namespace.useState("light");
-  React10__namespace.useEffect(() => {
+  const [theme, setTheme] = React14__namespace.useState(defaultTheme);
+  const [resolvedTheme, setResolvedTheme] = React14__namespace.useState("light");
+  React14__namespace.useEffect(() => {
     const stored = localStorage.getItem(storageKey);
     if (stored) {
       setTheme(stored);
     }
   }, [storageKey]);
-  React10__namespace.useEffect(() => {
+  React14__namespace.useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove("light", "dark");
     if (theme === "system" && enableSystem) {
@@ -2155,7 +2346,7 @@ function ThemeProvider({
     root.classList.add(resolvedValue);
     setResolvedTheme(resolvedValue);
   }, [theme, enableSystem]);
-  React10__namespace.useEffect(() => {
+  React14__namespace.useEffect(() => {
     if (theme !== "system" || !enableSystem) return;
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e) => {
@@ -2168,7 +2359,7 @@ function ThemeProvider({
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, [theme, enableSystem]);
-  const value = React10__namespace.useMemo(
+  const value = React14__namespace.useMemo(
     () => ({
       theme,
       resolvedTheme,
@@ -2179,10 +2370,10 @@ function ThemeProvider({
     }),
     [theme, resolvedTheme, storageKey]
   );
-  return /* @__PURE__ */ React10__namespace.createElement(ThemeProviderContext.Provider, { ...props, value }, children);
+  return /* @__PURE__ */ React14__namespace.createElement(ThemeProviderContext.Provider, { ...props, value }, children);
 }
 function useTheme() {
-  const context = React10__namespace.useContext(ThemeProviderContext);
+  const context = React14__namespace.useContext(ThemeProviderContext);
   if (context === void 0) {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
@@ -2273,6 +2464,16 @@ exports.SheetOverlay = SheetOverlay;
 exports.SheetPortal = SheetPortal;
 exports.SheetTitle = SheetTitle;
 exports.SheetTrigger = SheetTrigger;
+exports.Sidebar = Sidebar;
+exports.SidebarContent = SidebarContent;
+exports.SidebarFooter = SidebarFooter;
+exports.SidebarGroup = SidebarGroup;
+exports.SidebarHeader = SidebarHeader;
+exports.SidebarInset = SidebarInset;
+exports.SidebarItem = SidebarItem;
+exports.SidebarProvider = SidebarProvider;
+exports.SidebarSeparator = SidebarSeparator;
+exports.SidebarTrigger = SidebarTrigger;
 exports.Skeleton = Skeleton;
 exports.SkeletonAvatar = SkeletonAvatar;
 exports.SkeletonCard = SkeletonCard;
@@ -2329,6 +2530,7 @@ exports.useIsMobile = useIsMobile;
 exports.useIsTablet = useIsTablet;
 exports.useLocalStorage = useLocalStorage;
 exports.useMediaQuery = useMediaQuery;
+exports.useSidebar = useSidebar;
 exports.useTheme = useTheme;
 exports.useToast = useToast;
 //# sourceMappingURL=index.cjs.map

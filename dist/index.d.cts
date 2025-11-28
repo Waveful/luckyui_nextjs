@@ -123,6 +123,42 @@ declare const TabsTrigger: React$1.ForwardRefExoticComponent<Omit<TabsPrimitive.
 } & React$1.RefAttributes<HTMLButtonElement>>;
 declare const TabsContent: React$1.ForwardRefExoticComponent<Omit<TabsPrimitive.TabsContentProps & React$1.RefAttributes<HTMLDivElement>, "ref"> & React$1.RefAttributes<HTMLDivElement>>;
 
+interface SidebarContextValue {
+    expanded: boolean;
+    setExpanded: React$1.Dispatch<React$1.SetStateAction<boolean>>;
+    isMobile: boolean;
+}
+declare function useSidebar(): SidebarContextValue;
+declare const sidebarVariants: (props?: ({
+    variant?: "default" | "inset" | "floating" | null | undefined;
+    side?: "left" | "right" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+interface SidebarProviderProps {
+    children: React$1.ReactNode;
+    defaultExpanded?: boolean;
+}
+declare function SidebarProvider({ children, defaultExpanded, }: SidebarProviderProps): React$1.JSX.Element;
+interface SidebarProps extends React$1.HTMLAttributes<HTMLElement>, VariantProps<typeof sidebarVariants> {
+    collapsible?: boolean;
+}
+declare const Sidebar: React$1.ForwardRefExoticComponent<SidebarProps & React$1.RefAttributes<HTMLElement>>;
+declare const SidebarHeader: React$1.ForwardRefExoticComponent<React$1.HTMLAttributes<HTMLDivElement> & React$1.RefAttributes<HTMLDivElement>>;
+declare const SidebarContent: React$1.ForwardRefExoticComponent<React$1.HTMLAttributes<HTMLDivElement> & React$1.RefAttributes<HTMLDivElement>>;
+declare const SidebarFooter: React$1.ForwardRefExoticComponent<React$1.HTMLAttributes<HTMLDivElement> & React$1.RefAttributes<HTMLDivElement>>;
+interface SidebarGroupProps extends React$1.HTMLAttributes<HTMLDivElement> {
+    label?: string;
+}
+declare const SidebarGroup: React$1.ForwardRefExoticComponent<SidebarGroupProps & React$1.RefAttributes<HTMLDivElement>>;
+interface SidebarItemProps extends React$1.ButtonHTMLAttributes<HTMLButtonElement> {
+    icon?: React$1.ReactNode;
+    active?: boolean;
+    badge?: React$1.ReactNode;
+}
+declare const SidebarItem: React$1.ForwardRefExoticComponent<SidebarItemProps & React$1.RefAttributes<HTMLButtonElement>>;
+declare const SidebarTrigger: React$1.ForwardRefExoticComponent<React$1.ButtonHTMLAttributes<HTMLButtonElement> & React$1.RefAttributes<HTMLButtonElement>>;
+declare const SidebarSeparator: React$1.ForwardRefExoticComponent<React$1.HTMLAttributes<HTMLDivElement> & React$1.RefAttributes<HTMLDivElement>>;
+declare const SidebarInset: React$1.ForwardRefExoticComponent<React$1.HTMLAttributes<HTMLDivElement> & React$1.RefAttributes<HTMLDivElement>>;
+
 declare const badgeVariants: (props?: ({
     variant?: "default" | "secondary" | "destructive" | "outline" | "success" | "warning" | "info" | "muted" | null | undefined;
     size?: "default" | "sm" | "lg" | null | undefined;
@@ -424,4 +460,4 @@ interface ThemeProviderState {
 declare function ThemeProvider({ children, defaultTheme, storageKey, attribute, enableSystem, ...props }: ThemeProviderProps): React$1.JSX.Element;
 declare function useTheme(): ThemeProviderState;
 
-export { Accordion, AccordionContent, AccordionItem, AccordionTrigger, Alert, AlertDescription, AlertTitle, AspectRatio, Avatar, AvatarFallback, AvatarGroup, AvatarImage, Badge, Button, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Checkbox, Collapsible, CollapsibleContent, CollapsibleTrigger, Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogOverlay, DialogPortal, DialogTitle, DialogTrigger, DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger, IconButton, Input, Label, Loading, Popover, PopoverContent, PopoverTrigger, Progress, RadioGroup, RadioGroupItem, RedDot, ScrollArea, ScrollBar, SearchBar, Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectValue, Separator, Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger, Skeleton, SkeletonAvatar, SkeletonCard, SkeletonText, Slider, Switch, Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow, Tabs, TabsContent, TabsList, TabsTrigger, TextButton, Textarea, ThemeProvider, Toast$1 as Toast, ToastAction, ToastClose, ToastDescription, ToastProvider, ToastTitle, ToastViewport, Toaster, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, badgeVariants, buttonVariants, capitalize, cn, debounce, formatCurrency, formatDate, generateId, isClient, isServer, sleep, throttle, toCamelCase, toKebabCase, toast, truncate, useDebounce, useDebouncedCallback, useIsDesktop, useIsMobile, useIsTablet, useLocalStorage, useMediaQuery, useTheme, useToast };
+export { Accordion, AccordionContent, AccordionItem, AccordionTrigger, Alert, AlertDescription, AlertTitle, AspectRatio, Avatar, AvatarFallback, AvatarGroup, AvatarImage, Badge, Button, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Checkbox, Collapsible, CollapsibleContent, CollapsibleTrigger, Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogOverlay, DialogPortal, DialogTitle, DialogTrigger, DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger, IconButton, Input, Label, Loading, Popover, PopoverContent, PopoverTrigger, Progress, RadioGroup, RadioGroupItem, RedDot, ScrollArea, ScrollBar, SearchBar, Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectValue, Separator, Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger, Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarHeader, SidebarInset, SidebarItem, SidebarProvider, SidebarSeparator, SidebarTrigger, Skeleton, SkeletonAvatar, SkeletonCard, SkeletonText, Slider, Switch, Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow, Tabs, TabsContent, TabsList, TabsTrigger, TextButton, Textarea, ThemeProvider, Toast$1 as Toast, ToastAction, ToastClose, ToastDescription, ToastProvider, ToastTitle, ToastViewport, Toaster, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, badgeVariants, buttonVariants, capitalize, cn, debounce, formatCurrency, formatDate, generateId, isClient, isServer, sleep, throttle, toCamelCase, toKebabCase, toast, truncate, useDebounce, useDebouncedCallback, useIsDesktop, useIsMobile, useIsTablet, useLocalStorage, useMediaQuery, useSidebar, useTheme, useToast };

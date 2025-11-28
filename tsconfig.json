@@ -25,7 +25,8 @@
         "./src/*"
       ]
     },
-    "incremental": true
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo"
   },
   "include": [
     "next-env.d.ts",
