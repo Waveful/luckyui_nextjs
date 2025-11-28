@@ -20,6 +20,16 @@ import {
   Search01Icon,
   FavouriteIcon,
   Share01Icon,
+  Folder01Icon,
+  Calendar01Icon,
+  AnalyticsUpIcon,
+  HelpCircleIcon,
+  Logout01Icon,
+  InboxIcon,
+  TaskDone01Icon,
+  FileAttachmentIcon,
+  UserGroupIcon,
+  SecurityCheckIcon,
 } from "hugeicons-react";
 import { useTheme } from "@/components/theme-provider";
 import { Button, TextButton, IconButton } from "@/components/ui/button";
@@ -85,6 +95,47 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Slider } from "@/components/ui/slider";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
+import {
+  Sidebar,
+  SidebarProvider,
+  SidebarHeader,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarItem,
+  SidebarTrigger,
+  SidebarSeparator,
+  useSidebar,
+} from "@/components/ui/sidebar";
+
+// Helper components for sidebar demo that use the context
+function SidebarHeaderTitle() {
+  const { expanded } = useSidebar();
+  if (!expanded) return null;
+  return (
+    <div className="overflow-hidden">
+      <p className="font-semibold truncate">LuckyUI</p>
+      <p className="text-xs text-muted-foreground truncate">Dashboard</p>
+    </div>
+  );
+}
+
+function SidebarFooterContent() {
+  const { expanded } = useSidebar();
+  return (
+    <div className="flex items-center gap-3">
+      <Avatar size="sm">
+        <AvatarFallback>JD</AvatarFallback>
+      </Avatar>
+      {expanded && (
+        <div className="flex-1 overflow-hidden">
+          <p className="text-sm font-medium truncate">John Doe</p>
+          <p className="text-xs text-muted-foreground truncate">john@example.com</p>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Home() {
   const [progress, setProgress] = React.useState(45);
@@ -798,6 +849,108 @@ export default function Home() {
                   >
                     Warning Toast
                   </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Sidebar Section */}
+          <section className="mb-12">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-primary" />
+              Sidebar Navigation
+            </h3>
+            <Card>
+              <CardContent className="pt-5">
+                <p className="text-sm text-muted-foreground mb-4">
+                  Collapsible sidebar with navigation items, groups, and responsive behavior.
+                </p>
+                <div className="border border-border rounded-2xl overflow-hidden bg-background">
+                  <SidebarProvider defaultExpanded={true}>
+                    <div className="flex h-[420px]">
+                      <Sidebar variant="default" className="relative border-r">
+                        <SidebarTrigger />
+                        <SidebarHeader>
+                          <div className="h-8 w-8 rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
+                            <span className="text-primary-foreground font-bold text-sm">L</span>
+                          </div>
+                          <SidebarHeaderTitle />
+                        </SidebarHeader>
+                        <SidebarContent>
+                          <SidebarGroup label="Main">
+                            <SidebarItem icon={<Home01Icon />} active>
+                              Dashboard
+                            </SidebarItem>
+                            <SidebarItem icon={<AnalyticsUpIcon />}>
+                              Analytics
+                            </SidebarItem>
+                            <SidebarItem 
+                              icon={<Folder01Icon />}
+                              badge={<Badge size="sm" variant="secondary">12</Badge>}
+                            >
+                              Projects
+                            </SidebarItem>
+                            <SidebarItem icon={<Calendar01Icon />}>
+                              Calendar
+                            </SidebarItem>
+                            <SidebarItem icon={<InboxIcon />}>
+                              Inbox
+                            </SidebarItem>
+                            <SidebarItem icon={<TaskDone01Icon />}>
+                              Tasks
+                            </SidebarItem>
+                          </SidebarGroup>
+                          <SidebarSeparator />
+                          <SidebarGroup label="Workspace">
+                            <SidebarItem icon={<UserGroupIcon />}>
+                              Team
+                            </SidebarItem>
+                            <SidebarItem icon={<FileAttachmentIcon />}>
+                              Documents
+                            </SidebarItem>
+                            <SidebarItem icon={<SecurityCheckIcon />}>
+                              Security
+                            </SidebarItem>
+                          </SidebarGroup>
+                          <SidebarSeparator />
+                          <SidebarGroup label="Account">
+                            <SidebarItem icon={<UserIcon />}>
+                              Profile
+                            </SidebarItem>
+                            <SidebarItem 
+                              icon={<Notification01Icon />}
+                              badge={<Badge size="sm" variant="destructive">3</Badge>}
+                            >
+                              Notifications
+                            </SidebarItem>
+                            <SidebarItem icon={<Settings01Icon />}>
+                              Settings
+                            </SidebarItem>
+                            <SidebarItem icon={<HelpCircleIcon />}>
+                              Help & Support
+                            </SidebarItem>
+                          </SidebarGroup>
+                        </SidebarContent>
+                        <SidebarFooter>
+                          <SidebarFooterContent />
+                        </SidebarFooter>
+                      </Sidebar>
+                      <div className="flex-1 p-6 bg-secondary/20">
+                        <h4 className="text-lg font-semibold mb-2">Main Content Area</h4>
+                        <p className="text-sm text-muted-foreground mb-4">
+                          Click the toggle button on the sidebar edge to collapse/expand.
+                        </p>
+                        <div className="grid grid-cols-2 gap-3">
+                          {[1, 2, 3, 4].map((i) => (
+                            <Card key={i} variant="filled" className="p-4">
+                              <Skeleton className="h-4 w-3/4 mb-2" />
+                              <Skeleton className="h-3 w-1/2" />
+                            </Card>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </SidebarProvider>
                 </div>
               </CardContent>
             </Card>

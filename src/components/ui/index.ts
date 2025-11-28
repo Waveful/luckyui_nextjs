@@ -38,6 +38,19 @@ export { Separator } from "./separator";
 
 // Navigation
 export { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs";
+export {
+  Sidebar,
+  SidebarProvider,
+  SidebarHeader,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarItem,
+  SidebarTrigger,
+  SidebarSeparator,
+  SidebarInset,
+  useSidebar,
+} from "./sidebar";
 
 // Data Display
 export { Badge, badgeVariants, RedDot } from "./badge";
