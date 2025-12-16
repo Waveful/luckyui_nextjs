@@ -1,4 +1,4 @@
-[![LuckyUI Next.js Banner](https://i.postimg.cc/CMWcYDhG/luckyui-banner-min.png)](https://lucky-ui.com)
+[![LuckyUI Next.js Banner](https://raw.githubusercontent.com/Waveful/.github/main/profile/images/lucky_ui_banner.png)](https://lucky-ui.com)
 
 # LuckyUI Next.js
 
