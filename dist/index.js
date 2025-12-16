@@ -128,7 +128,7 @@ var TextButton = React14.forwardRef(({ className, loading, children, disabled, .
   {
     ref,
     className: cn(
-      "inline-flex items-center justify-center gap-2 text-[#80A7FF] font-medium transition-all duration-200 hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 active:scale-[0.97] [&_svg]:size-5",
+      "inline-flex items-center justify-center gap-2 text-[#8080FF] font-medium transition-all duration-200 hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 active:scale-[0.97] [&_svg]:size-5",
       className
     ),
     disabled: disabled || loading,
@@ -402,7 +402,7 @@ var Switch = React14.forwardRef(({ className, size = "default", ...props }, ref)
     SwitchPrimitives.Root,
     {
       className: cn(
-        "peer inline-flex shrink-0 cursor-pointer items-center rounded-full border border-transparent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-[#B3CAFF] data-[state=unchecked]:bg-input",
+        "peer inline-flex shrink-0 cursor-pointer items-center rounded-full border border-transparent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-[#B3B3FF] data-[state=unchecked]:bg-input",
         sizeClasses[size].root,
         className
       ),

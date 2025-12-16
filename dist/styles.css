@@ -14,8 +14,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 9%;
     
-    /* LuckyUI Primary - Brand Blue #024EFA */
-    --primary: 222 98% 49%;
+    /* LuckyUI Primary - Brand Blue #0000FF */
+    --primary: 240 100% 50%;
     --primary-foreground: 0 0% 100%;
     
     /* LuckyUI Secondary - Soft Gray */
@@ -49,7 +49,7 @@
     /* Borders and Inputs */
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 222 98% 49%;
+    --ring: 240 100% 50%;
     
     /* LuckyUI uses more rounded corners for mobile feel */
     --radius: 0.75rem;
@@ -71,8 +71,8 @@
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
     
-    /* LuckyUI Primary - Brand Blue #024EFA (brighter for dark mode) */
-    --primary: 222 98% 58%;
+    /* LuckyUI Primary - Brand Blue #0000FF (brighter for dark mode) */
+    --primary: 240 100% 60%;
     --primary-foreground: 0 0% 100%;
     
     /* LuckyUI Secondary - Neutral Gray */
@@ -106,7 +106,7 @@
     /* Borders and Inputs - Neutral Gray */
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 222 98% 58%;
+    --ring: 240 100% 60%;
   }
 }
 

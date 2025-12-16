@@ -1,6 +1,6 @@
 {
   "name": "@waveful-app/luckyui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A comprehensive Next.js/React design system package by Waveful - scalable and consistent UI components for modern applications",
   "author": "Waveful <hello@waveful.com>",
   "license": "Apache-2.0",
