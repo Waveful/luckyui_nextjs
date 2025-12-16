@@ -96,7 +96,7 @@ const TextButton = React.forwardRef<
   <button
     ref={ref}
     className={cn(
-      "inline-flex items-center justify-center gap-2 text-[#80A7FF] font-medium transition-all duration-200 hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 active:scale-[0.97] [&_svg]:size-5",
+      "inline-flex items-center justify-center gap-2 text-[#8080FF] font-medium transition-all duration-200 hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 active:scale-[0.97] [&_svg]:size-5",
       className
     )}
     disabled={disabled || loading}
